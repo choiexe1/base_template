@@ -1,8 +1,12 @@
 import 'package:base_template/config/routes/router.dart';
 import 'package:base_template/config/theme/app_theme.dart';
+import 'package:base_template/injection_container.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await injection();
+
   runApp(const App());
 }
 
